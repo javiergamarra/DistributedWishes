@@ -8,7 +8,7 @@
         android:layout_height="wrap_content"
         android:background="@android:color/darker_gray"
         android:padding="10dip"
-        android:text="addWish"
+        android:text="@string/addWish"
         android:textAppearance="@android:style/TextAppearance.Large"
         android:textColor="@android:color/white" />
 </LinearLayout>
