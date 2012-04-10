@@ -21,6 +21,7 @@
             android:textAppearance="@android:style/TextAppearance.Large"
             android:textColor="@android:color/white" />
         <Button
+            android:id="@+id/saveWish"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:background="@android:drawable/ic_menu_save" />
