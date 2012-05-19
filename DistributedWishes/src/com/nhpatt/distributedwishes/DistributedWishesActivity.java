@@ -4,7 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.app.ListActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 
@@ -23,5 +26,13 @@ public class DistributedWishesActivity extends ListActivity {
 		setListAdapter(adapter);
 
 		Button wishAddField = (Button) findViewById(R.id.addWish);
+		wishAddField.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(final View paramView) {
+				Intent intent = new Intent(DistributedWishesActivity.this,
+						AddWishActivity.class);
+				startActivity(intent);
+			}
+		});
 	}
 }
