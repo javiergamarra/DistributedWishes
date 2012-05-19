@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class AddWishActivity extends Activity {
 
@@ -24,6 +25,8 @@ public class AddWishActivity extends Activity {
 				Intent intent = new Intent();
 				intent.putExtra("resultado", wish);
 				setResult(RESULT_OK, intent);
+				Toast.makeText(AddWishActivity.this, "Deseo añadido!",
+						Toast.LENGTH_LONG).show();
 				finish();
 			}
 		});
