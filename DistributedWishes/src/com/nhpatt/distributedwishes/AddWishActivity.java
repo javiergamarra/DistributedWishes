@@ -1,6 +1,7 @@
 package com.nhpatt.distributedwishes;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -20,8 +21,11 @@ public class AddWishActivity extends Activity {
 			public void onClick(final View v) {
 				EditText wishField = (EditText) findViewById(R.id.wish);
 				String wish = wishField.getText().toString();
+				Intent intent = new Intent();
+				intent.putExtra("resultado", wish);
+				setResult(RESULT_OK, intent);
+				finish();
 			}
 		});
 	}
-
 }

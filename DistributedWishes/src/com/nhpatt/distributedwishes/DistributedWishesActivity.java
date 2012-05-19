@@ -3,6 +3,7 @@ package com.nhpatt.distributedwishes;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.R.array;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,6 +17,7 @@ public class DistributedWishesActivity extends ListActivity {
 
 	private final List<String> wishes = new ArrayList<String>();
 	private ArrayAdapter<String> adapter;
+	private static final int INCLUIR_NOTA = 0;
 
 	@Override
 	public void onCreate(final Bundle savedInstanceState) {
@@ -31,8 +33,25 @@ public class DistributedWishesActivity extends ListActivity {
 			public void onClick(final View paramView) {
 				Intent intent = new Intent(DistributedWishesActivity.this,
 						AddWishActivity.class);
-				startActivity(intent);
+				startActivityForResult(intent, INCLUIR_NOTA);
 			}
 		});
+	}
+
+	@Override
+	protected void onActivityResult(final int requestCode,
+			final int resultCode, final Intent data) {
+		switch (requestCode) {
+		case INCLUIR_NOTA:
+			if (resultCode == RESULT_OK) {
+				wishes.add(data.getExtras().getString("resultado"));
+				adapter.notifyDataSetChanged();
+			}
+			break;
+
+		default:
+			break;
+		}
+		super.onActivityResult(requestCode, resultCode, data);
 	}
 }
