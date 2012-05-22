@@ -34,11 +34,12 @@ public class WishAdapter extends ArrayAdapter<Wish> {
 	}
 
 	private void setValuesFromWishInRow(final Wish wish, final View convertView) {
-		final TextView fecha = (TextView) convertView
-				.findViewById(R.id.bottomText);
-		fecha.setText(wish.getRating().toString());
-		final TextView textoNota = (TextView) convertView
+		final TextView wishText = (TextView) convertView
 				.findViewById(R.id.topText);
-		textoNota.setText(wish.getWish());
+		wishText.setText(wish.getId() + " - " + wish.getWish());
+		final TextView rating = (TextView) convertView
+				.findViewById(R.id.bottomText);
+		rating.setText(getContext().getString(R.string.rating) + " "
+				+ wish.getRating().toString());
 	}
 }

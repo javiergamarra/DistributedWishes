@@ -4,5 +4,8 @@
     <string name="app_name">DistributedWishes</string>
     <string name="addWish">Add Wish</string>
     <string name="addWishFocus">Add your wish here...</string>
+    <string name="wishAdded">Deseo añadido!</string>
+    <string name="rating">Rating:</string>
+    <string name="noWishes">No hay deseos, animate!</string>
 
 </resources>

@@ -48,7 +48,8 @@ public class DistributedWishesActivity extends ListActivity {
 			if (resultCode == RESULT_OK) {
 				Random random = new Random(Calendar.getInstance()
 						.getTimeInMillis());
-				wishes.add(new Wish(data.getExtras().getString("resultado"),
+				Integer id = ((MyApplication) getApplication()).getId();
+				wishes.add(new Wish(id, data.getExtras().getString("result"),
 						random.nextInt(11)));
 				adapter.notifyDataSetChanged();
 			}

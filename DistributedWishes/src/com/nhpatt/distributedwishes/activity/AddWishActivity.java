@@ -25,11 +25,12 @@ public class AddWishActivity extends Activity {
 				EditText wishField = (EditText) findViewById(R.id.wish);
 
 				Intent intent = new Intent();
-				intent.putExtra("resultado", wishField.getText().toString());
+				intent.putExtra("result", wishField.getText().toString());
 
 				setResult(RESULT_OK, intent);
-				Toast.makeText(AddWishActivity.this, "Deseo añadido!",
-						Toast.LENGTH_LONG).show();
+				Toast.makeText(AddWishActivity.this,
+						getString(R.string.wishAdded), Toast.LENGTH_LONG)
+						.show();
 				finish();
 			}
 		});
