@@ -1,4 +1,4 @@
-package com.nhpatt.distributedwishes.activity;
+package com.nhpatt.distributedwishes.model;
 
 import java.io.Serializable;
 

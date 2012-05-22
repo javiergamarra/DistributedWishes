@@ -1,4 +1,4 @@
-package com.nhpatt.distributedwishes.activity;
+package com.nhpatt.distributedwishes.adapter;
 
 import java.util.List;
 
@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.nhpatt.distributedwishes.R;
+import com.nhpatt.distributedwishes.model.Wish;
 
 public class WishAdapter extends ArrayAdapter<Wish> {
 
@@ -27,14 +28,17 @@ public class WishAdapter extends ArrayAdapter<Wish> {
 			convertView = vi.inflate(R.layout.fila, null);
 		}
 
-		final Wish wish = getItem(position);
+		setValuesFromWishInRow(getItem(position), convertView);
+
+		return convertView;
+	}
+
+	private void setValuesFromWishInRow(final Wish wish, final View convertView) {
 		final TextView fecha = (TextView) convertView
 				.findViewById(R.id.bottomText);
 		fecha.setText(wish.getRating().toString());
 		final TextView textoNota = (TextView) convertView
 				.findViewById(R.id.topText);
 		textoNota.setText(wish.getWish());
-
-		return convertView;
 	}
 }

@@ -13,6 +13,8 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 import com.nhpatt.distributedwishes.R;
+import com.nhpatt.distributedwishes.adapter.WishAdapter;
+import com.nhpatt.distributedwishes.model.Wish;
 
 public class DistributedWishesActivity extends ListActivity {
 	private final List<Wish> wishes = new ArrayList<Wish>();
