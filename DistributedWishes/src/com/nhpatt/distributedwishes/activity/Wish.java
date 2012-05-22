@@ -1,6 +1,10 @@
-package com.nhpatt.distributedwishes;
+package com.nhpatt.distributedwishes.activity;
 
-public class Wish {
+import java.io.Serializable;
+
+public class Wish implements Serializable {
+
+	private static final long serialVersionUID = 1L;
 
 	private Integer rating;
 	private String wish;

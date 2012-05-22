@@ -1,4 +1,4 @@
-package com.nhpatt.distributedwishes;
+package com.nhpatt.distributedwishes.activity;
 
 import java.util.List;
 
@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+
+import com.nhpatt.distributedwishes.R;
 
 public class WishAdapter extends ArrayAdapter<Wish> {
 

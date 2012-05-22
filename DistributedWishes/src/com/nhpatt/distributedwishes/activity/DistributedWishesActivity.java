@@ -1,4 +1,4 @@
-package com.nhpatt.distributedwishes;
+package com.nhpatt.distributedwishes.activity;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -10,12 +10,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 
-public class DistributedWishesActivity extends ListActivity {
-	private static final String TAG = "DISTRIBUTED_WISHES";
+import com.nhpatt.distributedwishes.R;
 
+public class DistributedWishesActivity extends ListActivity {
 	private final List<Wish> wishes = new ArrayList<Wish>();
 	private WishAdapter adapter;
 	private static final int INCLUIR_NOTA = 0;

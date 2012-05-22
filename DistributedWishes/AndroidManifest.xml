@@ -11,7 +11,7 @@
         android:label="@string/app_name"
         android:theme="@android:style/Theme.Black.NoTitleBar" >
         <activity
-            android:name=".DistributedWishesActivity"
+            android:name="com.nhpatt.distributedwishes.activity.DistributedWishesActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,8 +19,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-         <activity
-            android:name=".AddWishActivity"
+        <activity
+            android:name="com.nhpatt.distributedwishes.activity.AddWishActivity"
             android:label="@string/app_name" >
         </activity>
     </application>

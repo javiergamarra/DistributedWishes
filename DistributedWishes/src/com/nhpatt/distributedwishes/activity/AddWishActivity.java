@@ -1,4 +1,4 @@
-package com.nhpatt.distributedwishes;
+package com.nhpatt.distributedwishes.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,6 +8,8 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.nhpatt.distributedwishes.R;
 
 public class AddWishActivity extends Activity {
 
@@ -21,9 +23,10 @@ public class AddWishActivity extends Activity {
 			@Override
 			public void onClick(final View v) {
 				EditText wishField = (EditText) findViewById(R.id.wish);
-				String wish = wishField.getText().toString();
+
 				Intent intent = new Intent();
-				intent.putExtra("resultado", wish);
+				intent.putExtra("resultado", wishField.getText().toString());
+
 				setResult(RESULT_OK, intent);
 				Toast.makeText(AddWishActivity.this, "Deseo añadido!",
 						Toast.LENGTH_LONG).show();
