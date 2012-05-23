@@ -1,6 +1,8 @@
 package com.nhpatt.distributedwishes.model;
 
 import java.io.Serializable;
+import java.util.Calendar;
+import java.util.Random;
 
 public class Wish implements Serializable {
 
@@ -10,10 +12,11 @@ public class Wish implements Serializable {
 	private Integer rating;
 	private String wish;
 
-	public Wish(final Integer id, final String wish, final int rating) {
+	public Wish(final Integer id, final String wish) {
 		this.id = id;
 		this.wish = wish;
-		this.rating = rating;
+		Random random = new Random(Calendar.getInstance().getTimeInMillis());
+		this.rating = random.nextInt(11);
 	}
 
 	public Integer getId() {

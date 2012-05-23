@@ -1,6 +1,8 @@
 package com.nhpatt.distributedwishes.activity;
 
 import android.app.Application;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 
 public class MyApplication extends Application {
 
@@ -9,10 +11,14 @@ public class MyApplication extends Application {
 		super.onCreate();
 	}
 
-	private Integer id = 0;
-
 	public Integer getId() {
-		return id++;
-	}
+		SharedPreferences preferences = PreferenceManager
+				.getDefaultSharedPreferences(this);
 
+		SharedPreferences.Editor editor = preferences.edit();
+		int id = preferences.getInt("id", 0) + 1;
+		editor.putInt("id", id);
+		editor.commit();
+		return id;
+	}
 }
